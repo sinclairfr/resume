@@ -1,0 +1,291 @@
+%%%%%%%%%%%%%%%%%
+% Template CV adapté pour Mehdi Fekih
+% Basé sur altacv.cls (v1.7.2, 28 August 2024)
+%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% Configuration de la page
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% Utilisation de paracol pour le layout en colonnes
+\usepackage{paracol}
+
+% Configuration des polices
+\iftutex 
+  % Si utilisation de xelatex ou lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % Si utilisation de pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Définition des couleurs (tons bleu foncé pour un style professionnel)
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkNavy}{HTML}{1C2B35}
+\definecolor{MediumBlue}{HTML}{3D5A73}
+\definecolor{AccentBlue}{HTML}{4A7396}
+\colorlet{name}{DarkNavy}
+\colorlet{tagline}{MediumBlue}
+\colorlet{heading}{DarkNavy}
+\colorlet{headingrule}{AccentBlue}
+\colorlet{subheading}{MediumBlue}
+\colorlet{accent}{MediumBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Personnalisation des polices
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Personnalisation des marqueurs
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+
+% Traduction des termes pour français
+\renewcommand{\locationname}{Lieu}
+\renewcommand{\datename}{Date}
+
+
+
+\begin{document}
+\name{Mehdi Fekih}
+\tagline{Cloud Data Engineer | NLP | Big Data | Computer Vision | Machine Learning | AWS certified}
+
+% Photo optionnelle
+\photoR{2.8cm}{photo_profile}
+
+\personalinfo{%
+  \email{mehdi.fekih@edhec.com}
+  \phone{0782906071}
+  \location{Paris, Île-de-France, France}
+  %\homepage{domainelibre.com}
+  \linkedin{mehdi-fekih-ai}
+  % \github{votre_id_github} % À ajouter si disponible
+}
+
+\makecvheader
+
+% Définir le ratio des colonnes
+\columnratio{0.6}
+
+% Commencer la mise en page en 2 colonnes
+\begin{paracol}{2}
+
+\cvsection{Expérience}
+
+\cvevent{Gérant - Data Engineer / Data Scientist}{Alphaprime}{janvier 2023 -- Present}{France}
+\begin{itemize}
+\item Création d’outils NLP (chatbots, LLM, LangChain)
+\item Fine-tuning et prompt engineering
+\item Data Wrangling (Alteryx) et DataViz (Tableau, PowerBI)
+\item Création de tableaux de bord dynamiques avec Streamlit, Gradio, Dash
+\item Computer vision (détection d'anomalies, analyse de flux vidéo)
+\item Déploiements MLops (Docker, Google Cloud, Azure, AWS)
+\end{itemize}
+
+\divider
+
+\cvevent{Data Engineer}{Ofi Invest Asset Management}{décembre 2023 -- avril 2024}{Paris, France}
+\begin{itemize}
+\item Transformation de données via Cloud Data Prep (Trifacta \& Alteryx)
+\item ETL et monitoring sur Apache Airflow
+\item Mise en place du data warehouse via Google Cloud Platform
+\item Mise en recette des données, test de régression via BigQuery
+\item Monitoring qualité via Tableau et notebook Collab
+\end{itemize}
+
+\divider
+
+\cvevent{Consultant, automatisation et sécurité}{Freelance}{mars 2019 -- mars 2021}{Paris, France}
+\begin{itemize}
+\item Mise en place d'outils de reporting automatisé via SAP Business Objects
+\item Traitement et sécurisation des données sensibles (data wrangling, chiffrage, redondance)
+\item Solutions de gestion de télésurveillance via objets connectés (IoT) et traitement d'images
+\item Pentesting interne et conseil en sécurisation de réseau, mise en place de VPN
+\item Infogérance sur serveurs et docker
+\end{itemize}
+
+\divider
+
+\cvevent{Consultant, E-commerce et Marketing digital}{Freelance}{juin 2017 -- mars 2019}{Bangkok, Thaïlande}
+\begin{itemize}
+\item Mission de conseils dans l'e-commerce et le marketing digital
+\item Gestion du pricing Booking.com, Airbnb, Agoda pour compte de tiers
+\item Mise en œuvre de techniques d'optimisation des moteurs de recherche (SEO)
+\item Gestion des PNL pour augmenter les réservations directes et les conversions
+\end{itemize}
+
+\divider
+
+\cvevent{Conseil, réseau interne d'entreprises}{Permis Vacances Travail}{juin 2016 -- juin 2017}{Sydney, Australie}
+\begin{itemize}
+\item Développement web dans l'e-commerce
+\item Mise en place de réseaux d'entreprises et de solutions de virtualisation
+\item Gestion de firewalls et de réseaux internes (pfSense)
+\end{itemize}
+
+\divider
+
+\cvevent{Développeur Web Full-Stack}{Agence Web02}{2009 -- 2017}{Saint Denis de la Réunion}
+\begin{itemize}
+\item Programmation et maintien de sites Internet et d'applications Web
+\item Conseil en digitalisation et optimisation des processus pour PME locales
+\item Mise en place de solutions e-commerce « clé en main »
+\end{itemize}
+
+% Utilisez \newpage si vous souhaitez forcer un saut de page dans la colonne actuelle
+%\newpage
+\divider
+
+\cvevent{Gestion immobilière de standing}{Indépendant}{2013 -- 2016}{Paris, France}
+\begin{itemize}
+\item Gestion locative d'un parc immobilier pour location touristique à Paris et supervision des chantiers de rénovation
+\item Prospection d'appartements pour acquéreurs étrangers, conseil en investissement immobilier haut de gamme (>1M€)
+\end{itemize}
+
+\divider
+
+\cvevent{Assistant gérant}{Crédit Agricole CIB}{2008 -- 2009}{Paris, France}
+\begin{itemize}
+\item Préparation de notes de comités pour les nouveaux investissements en dérivés de crédit ABS/CDO
+\item Calcul et mesure du risque de portefeuille (Value-at-Risk, ABS exotiques et vanilles, SWAP)
+\item Conception d'outils de mesures de risques et d'aide à la décision en VBA
+\end{itemize}
+
+\divider
+
+\cvevent{Analyste des Risques Crédit}{Natixis Corporate \& Investment Banking}{2008 -- 2008}{Paris, France}
+\begin{itemize}
+\item Étude de dossiers de financements pour passage en comité de crédit (financements structurés)
+\item Analyse financière, notation et analyse des risques de crédit sur un portefeuille d'entreprises
+\end{itemize}
+% À placer avant \divider
+
+%\begin{itemize}
+%\item Rédaction de rapports sur des business plans de petites PME
+%\item Analyse du risque, de la faisabilité, et prise de décision
+%\item Négociation des dossiers de financements avec les demandeurs
+%\end{itemize}
+
+
+% Passer à la colonne de droite
+\switchcolumn
+
+\cvsection{A propos de moi}
+
+\begin{quote}
+Data Scientist expérimenté avec une solide expertise en data engineering. Je suis capable de collaborer efficacement avec des équipes techniques et des Business Units pour transformer vos données et améliorer leurs time-to-market.
+\end{quote}
+
+\cvsection{Compétences}
+\cvsubsection{Data Engineering}
+{\LaTeXraggedright
+\cvtag{Airflow}
+\cvtag{Spark}
+\cvtag{Kafka}
+\cvtag{ETL/ELT}
+\cvtag{Data Warehouse}
+\cvtag{dbt}
+\cvtag{SQL}
+\cvtag{NoSQL}
+\par}
+
+\cvsubsection{Cloud \& DevOps}
+{\LaTeXraggedright
+\cvtag{Docker}
+\cvtag{Kubernetes}
+\cvtag{GCP}
+\cvtag{AWS}
+\cvtag{Terraform}
+\cvtag{CI/CD}
+\cvtag{Jenkins}
+\par}
+
+\medskip % ou \smallskip pour un espacement plus petit
+
+\cvsubsection{Data Science \& Analytics}
+{\LaTeXraggedright
+\cvtag{Python}
+\cvtag{Pandas}
+\cvtag{PyTorch}
+\cvtag{NLP}
+\cvtag{LLMs}
+\cvtag{Streamlit}
+\cvtag{Tableau}
+\cvtag{PowerBI}
+\par}
+
+
+\cvsection{Certifications}
+
+\cvachievement{\faCertificate}{AWS Certified Solutions Architect}{Associate Level}
+
+\cvsection{Languages}
+
+\cvskill{Français}{5}
+\divider
+
+\cvskill{Anglais}{4.5}
+\divider
+
+\cvskill{Espagnol}{3}
+\divider
+
+\cvskill{Italien}{2}
+\divider
+
+\cvskill{Thaï}{2}
+
+\medskip
+
+\cvsection{Formation}
+
+\cvevent{Data Engineer, Data Science et Machine Learning}{DataScientest.com}{mai 2024 -- août 2024}{}
+
+\divider
+
+\cvevent{Master's degree, Data Science}{OpenClassrooms}{février 2022 -- janvier 2023}{}
+
+\divider
+
+\cvevent{Master in Management - Programme Grande École}{EDHEC Business School}{2005 -- 2009}{}
+
+\divider
+
+\cvevent{Licence, Mathématiques appliquées}{Université Pierre et Marie Curie}{2010}{}
+
+\cvsection{Projets personnels}
+Développement de solutions innovantes combinant data science et  domotique.
+
+\cvsection{Savoir-être}
+{\faLightbulb} Curiosité
+{\faBalanceScale} Exigence
+{\faWind} Adaptabilité
+
+\divider
+
+\cvsection{Savoir-Faire}
+{\faPuzzlePiece} Agilité
+{\faComments} Communication transversale
+{\faRocket} Pro-activité
+
+
+% Pour ajouter un diagramme circulaire (décommentez si nécessaire)
+% \wheelchart{1.5cm}{0.5cm}{%
+%   30/8em/accent!30/{Data Engineering},
+%   25/8em/accent!40/Machine Learning,
+%   25/8em/accent!60/Data Analytics,
+%   20/10em/accent/Développement
+% }
+
+\end{paracol}
+
+\end{document}
